@@ -3,23 +3,22 @@ package ru.dvatin.servingwebcontent.models;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "users")
 public class User {
+
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-   private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     @Column
-   private String name;
+    private String name;
     @Column
-   private String surname;
+    private String email;
 
     public User() {
     }
 
-    public User(int id, String name, String surname) {
-        this.id = id;
+    public User(String name, String email) {
         this.name = name;
-        this.surname = surname;
+        this.email = email;
     }
 
     public int getId() {
@@ -38,11 +37,11 @@ public class User {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
