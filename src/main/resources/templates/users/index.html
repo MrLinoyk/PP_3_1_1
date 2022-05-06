@@ -29,8 +29,9 @@
         </form>
       </td>
       <td>
-        <form th:action="@{/users}" th:object="${user}" th:method="delete">
-          <input type="hidden" name="id" th:value="${user.getId()}">
+        <form th:method="DELETE" th:action="@{users/delete/{id}(id=${user.getId()})}" th:object="${user}">
+<!--        <form th:action="@{/users}" th:object="${user}" th:method="delete">-->
+<!--          <input type="hidden" name="id" th:value="${user.getId()}">-->
 <!--        <form method="POST" th:action="@{users/delete/{id}(id=${user.getId()})}" th:object="${user}">-->
           <button type="submit">Удалить</button>
         </form>
