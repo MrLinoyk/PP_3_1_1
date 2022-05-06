@@ -29,7 +29,7 @@
         </form>
       </td>
       <td>
-        <form th:action="@{/users/delete}" th:object="${user}" method="post">
+        <form th:action="@{/users}" th:object="${user}" th:method="delete">
           <input type="hidden" name="id" th:value="${user.getId()}">
 <!--        <form method="POST" th:action="@{users/delete/{id}(id=${user.getId()})}" th:object="${user}">-->
           <button type="submit">Удалить</button>
