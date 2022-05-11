@@ -7,7 +7,7 @@ import ru.dvatin.servingwebcontent.repositories.UserRepository;
 @Service
 public class UserServiceImp implements UserService{
 
-    final
+    private final
     UserRepository userRepository;
 
     public UserServiceImp(UserRepository userRepository) {
